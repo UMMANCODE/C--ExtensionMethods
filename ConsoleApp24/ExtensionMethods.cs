@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 namespace ConsoleApp24 {
     internal static class ExtensionMethods {
         public static bool IsOdd(this int value) {
+            if (value == 0) return false;
             if (value % 2 == 0) return false;
             return true;
         }
 
         public static bool IsEven(this int value) {
+            if (value == 0) return true;
             if ((value % 2) == 0) return true;
             return false;
         }
